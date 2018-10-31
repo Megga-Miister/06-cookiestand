@@ -99,10 +99,16 @@ console.log(locations);
 
 // inputs to create then display table with locations
 
-new Location('1st and Pike', 23, 65, 6.3, customersPerHour, cookiesPerHour, ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm']);
-new Location('Sea-Tac Airport', 3, 24, 1.2, customersPerHour, cookiesPerHour, ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm']);
-new Location('Seattle Center', 11, 38, 3.7, customersPerHour, cookiesPerHour, ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm']);
-new Location('Capitol Hill', 20, 38, 2.3, customersPerHour, cookiesPerHour, ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm']);
-new Location('Alki', 2, 16, 4.6, customersPerHour, cookiesPerHour, ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm']);
+var firstAndPike = new Location('1st and Pike', 23, 65, 6.3, ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm']);
+var seatacAirport = new Location('Sea-Tac Airport', 3, 24, 1.2, ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm']);
+var seattleCenter = new Location('Seattle Center', 11, 38, 3.7, ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm']);
+var capitolHill = new Location('Capitol Hill', 20, 38, 2.3, ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm']);
+var alki = new Location('Alki', 2, 16, 4.6, ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm']);
+
+firstAndPike.addCustomersPerHour()
+seatacAirport.addCustomersPerHour()
+seattleCenter.addCustomersPerHour()
+capitolHill.addCustomersPerHour()
+alki.addCustomersPerHour()
 
 console.log(locations);
