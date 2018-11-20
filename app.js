@@ -1,6 +1,9 @@
-var locations = [];
+'use strict';
 
-function Location(storeLocation, minCustomersPerHour, maxCustPerHour, avgCookiesSoldPerCust, hoursOpen) {
+var locations = [];
+var hoursOpen = ['6am', ' 7am', ' 8am', ' 9am', ' 10am', ' 11am', ' 12pm', ' 1pm', ' 2pm', ' 3pm', ' 4pm', ' 5pm', ' 6pm', ' 7pm', ' 8pm'];
+
+function Location(storeLocation, minCustomersPerHour, maxCustPerHour, avgCookiesSoldPerCust) {
   this.storeLocation = storeLocation;
   this.minCustomersPerHour = minCustomersPerHour;
   this.maxCustPerHour = maxCustPerHour;
@@ -80,8 +83,15 @@ Location.prototype.render = function() {
 };
 
 function createHeader() {
-  var tableHeaderElement = document.createElement('thead');
-  tableHeaderElement.id = 'tbl-head';
+  var tableHeaderElement = document.getElement('tableHeaderElement');
+  var tableHeaderRow = document.createElement('tr');
+  var tableHeaderData = document.createElement('td');
+  
+  tableHeaderData.textContent = [hoursOpen + hoursOpen.push('Total')];
+  
+  tableHeaderRow.appendChild(tableHeaderData);
+  tableHeaderElement.appendChild(tableHeaderRow)
+  tableHeaderElement.col
   return tableHeaderElement;
 }
 
@@ -115,11 +125,11 @@ console.log(locations);
 
 // inputs to create then display table with locations
 
-var firstAndPike = new Location('1st and Pike', 23, 65, 6.3, ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm']);
-// var seatacAirport = new Location('Sea-Tac Airport', 3, 24, 1.2, ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm']);
-// var seattleCenter = new Location('Seattle Center', 11, 38, 3.7, ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm']);
-// var capitolHill = new Location('Capitol Hill', 20, 38, 2.3, ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm']);
-// var alki = new Location('Alki', 2, 16, 4.6, ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm']);
+var firstAndPike = new Location('1st and Pike', 23, 65, 6.3);
+var seatacAirport = new Location('Sea-Tac Airport', 3, 24, 1.2);
+var seattleCenter = new Location('Seattle Center', 11, 38, 3.7);
+var capitolHill = new Location('Capitol Hill', 20, 38, 2.3);
+var alki = new Location('Alki', 2, 16, 4.6);
 
 
 console.log(locations);
