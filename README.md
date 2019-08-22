@@ -1,5 +1,5 @@
-# 06-cookiestand
-Salmon Cookies Lab Project
+# cookiestand
+Salmon Cookies 
 
 Used class demo code for this lab to create my initial objects without constructors
 
